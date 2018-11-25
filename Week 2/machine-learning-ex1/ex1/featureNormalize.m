@@ -24,10 +24,21 @@ sigma = zeros(1, size(X, 2));
 %               each feature. 
 %
 % Hint: You might find the 'mean' and 'std' functions useful.
-%       
 
+%mean vector
+mu = mu+mean(X)
 
+%repeat that vector so we can subtract it
+mu_all = repmat(mu,rows(X),1);
 
+%std vector
+sigma = sigma+std(X)
+
+%repeat that vector so we can subtract it
+sigma_all = repmat(sigma, rows(X),1);
+
+%calculate x_norm
+X_norm = (X-mu_all)./sigma_all
 
 
 
