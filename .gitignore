@@ -1,2 +1,4 @@
 # need to ignore token file
 *.mat
+#ignore chromedriver
+*.exe
